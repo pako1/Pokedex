@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:fillViewport="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_view_end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="4dp"
+            tools:cardBackgroundColor="@color/colorPrimary">
+
+            <androidx.core.widget.ContentLoadingProgressBar
+                android:id="@+id/progress_bar"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/header_card"
+                    style="@style/BottomCutCardView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/order"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.8"
+                            app:layout_constraintStart_toEndOf="@id/image"
+                            app:layout_constraintTop_toTopOf="@id/image"
+                            tools:text="#001" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="12dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            app:layout_constraintBottom_toTopOf="@id/name"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.7"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.45"
+                            tools:src="@drawable/ic_launcher_background" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:elevation="4dp"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:padding="12dp"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="@id/image"
+                            app:layout_constraintStart_toStartOf="@id/image"
+                            app:layout_constraintTop_toBottomOf="@id/image"
+                            tools:text="Bulbasaur" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/first_type"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="24dp"
+                    app:layout_constraintEnd_toStartOf="@id/second_type"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/header_card"
+                    tools:backgroundTint="@android:color/black">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="6dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/first_icon_type"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:contentDescription="@null"
+                            app:layout_constraintBottom_toBottomOf="@id/first_type_text"
+                            app:layout_constraintEnd_toStartOf="@id/first_type_text"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/first_type_text"
+                            app:layout_constraintWidth_percent="0.4"
+                            tools:src="@drawable/ic_rock" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/first_type_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:textColor="@color/primaryTextColor"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/first_icon_type"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="Poison" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/second_type"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/first_type"
+                    app:layout_constraintTop_toBottomOf="@id/header_card"
+                    tools:backgroundTint="@android:color/black">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="6dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/second_icon_type"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:contentDescription="@null"
+                            app:layout_constraintBottom_toBottomOf="@id/second_type_text"
+                            app:layout_constraintEnd_toStartOf="@id/second_type_text"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/second_type_text"
+                            app:layout_constraintWidth_percent="0.4"
+                            tools:src="@drawable/ic_rock" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/second_type_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:textColor="@color/primaryTextColor"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/second_icon_type"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="Poison" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/height_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:gravity="center"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/divider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/first_type"
+                    tools:text="4.11''" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/height_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/height"
+                    android:textColor="@color/washedOutColor"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/divider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/height_value" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:background="@color/washedOutColor"
+                    app:layout_constraintBottom_toBottomOf="@id/height_label"
+                    app:layout_constraintEnd_toStartOf="@id/weight_value"
+                    app:layout_constraintStart_toEndOf="@id/height_label"
+                    app:layout_constraintTop_toTopOf="@id/height_value" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/weight_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/divider"
+                    app:layout_constraintTop_toTopOf="@id/height_value"
+                    tools:text="4.11''" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/weight_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/weight"
+                    android:textColor="@color/washedOutColor"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/divider"
+                    app:layout_constraintTop_toBottomOf="@id/weight_value" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/stats"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="Stats"
+                    android:textColor="@color/washedOutColor"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/divider" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/hp"
+                    style="@style/progressStyleText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="HP"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/stats" />
+
+                <androidx.core.widget.ContentLoadingProgressBar
+                    android:id="@+id/hp_progress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:progressBackgroundTint="@color/washedOutColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/hp"
+                    app:layout_constraintTop_toBottomOf="@id/hp"
+                    tools:max="100"
+                    tools:progress="45" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/attack"
+                    style="@style/progressStyleText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="attack"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/hp" />
+
+                <androidx.core.widget.ContentLoadingProgressBar
+                    android:id="@+id/attack_progress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:progressBackgroundTint="@color/washedOutColor"
+                    android:progressTint="@color/fire"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/attack"
+                    app:layout_constraintTop_toBottomOf="@id/attack"
+                    tools:max="100"
+                    tools:progress="45" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/defense"
+                    style="@style/progressStyleText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="defense"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/attack" />
+
+                <androidx.core.widget.ContentLoadingProgressBar
+                    android:id="@+id/defense_progress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:progressBackgroundTint="@color/washedOutColor"
+                    android:progressTint="@color/flying"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/defense"
+                    app:layout_constraintTop_toBottomOf="@id/defense"
+                    tools:max="100"
+                    tools:progress="45" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/speed"
+                    style="@style/progressStyleText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="speed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/defense" />
+
+                <androidx.core.widget.ContentLoadingProgressBar
+                    android:id="@+id/speed_progress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="24dp"
+                    android:progressBackgroundTint="@color/washedOutColor"
+                    android:progressTint="@color/electric"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/speed"
+                    app:layout_constraintTop_toBottomOf="@id/speed"
+                    tools:max="100"
+                    tools:progress="45" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <include
+                android:id="@+id/error_state"
+                layout="@layout/error_state" />
+
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

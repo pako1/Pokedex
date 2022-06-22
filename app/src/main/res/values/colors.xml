@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#424242</color>
+    <color name="primaryLightColor">#6d6d6d</color>
+    <color name="primaryDarkColor">#303030</color>
+    <color name="primaryTextColor">@color/white</color>
+    <color name="onBackgroundTextColor">@android:color/black</color>
+    <color name="washedOutColor">#FFCDCDCD</color>
+    <color name="colorSecondaryDay">#FF36615D</color>
+    <color name="colorSecondaryNight">@color/electric</color>
+
+    <color name="electric">#FBC02D</color>
+    <color name="fairy">#8A1137</color>
+    <color name="fire">#D3252B</color>
+    <color name="flying">#A5C7DC</color>
+    <color name="ghost">#423B81</color>
+    <color name="ice">#94CFE8</color>
+    <color name="poison">#642785</color>
+    <color name="psychic">#6C1943</color>
+    <color name="rock">#4C1408</color>
+    <color name="steel">#5C6A66</color>
+    <color name="water">#1D3498</color>
+    <color name="fighting">#AC3F22</color>
+    <color name="grass">#0C7142</color>
+    <color name="ground">#A16B32</color>
+    <color name="bug">#179A55</color>
+    <color name="dark">#06092C</color>
+    <color name="dragon">#378A94</color>
+    <color name="type_default">#B1A5A5</color>
+    <color name="white">#ffffff</color>
+</resources>
+
+    <!--
+       Background represents the background/canvas of the app where you put everyting on it
+       <color name="background">#ffffff</color>
+       Surface represents the color of any elevated component
+       <color name="surface">#ffffff</color>
+       error represents the color of error. semantic color, add more like warning, success etc
+       <color name="error">@color/fairy</color>
+       Everything that has a color colorPrimary e.g. app bar then every comp on it will use this color for, e.g. title, menu icon
+       <color name="onPrimary">@color/fairy</color>
+       same as primary but with secondary
+       <color name="onSecondary">@color/fairy</color>
+       Applies for elements on the background
+       <color name="onBackground">@color/fairy</color>
+       Applies for elements on the surfaces
+       <color name="onSurface">@color/fairy</color>
+       Applies for elements on the error component
+       <color name="onError">@color/fairy</color>-->

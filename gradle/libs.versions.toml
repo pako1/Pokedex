@@ -1,0 +1,83 @@
+[versions]
+appcompat = "1.4.1"
+constraintlayout = "2.1.4"
+coreKtx = "1.7.0"
+lifecycle = "2.4.1"
+recyclerview = "1.2.1"
+cardview = "1.0.0"
+coil = "1.4.0"
+navigation = "2.4.2"
+fragment = "1.4.1"
+material-design = "1.6.0"
+junit = "4.13.2"
+junit-ext = "1.1.3"
+okhttp = "4.9.3"
+graphql = "3.3.0"
+hilt = "2.41"
+espresso = "3.4.0"
+mockk = "1.12.4"
+automator = "2.2.0"
+timber = "5.0.1"
+lottie = "5.1.0"
+hiltcompiler = "1.0.0"
+test-coroutine = "1.6.1"
+androidx-test = "1.4.0"
+app-version = "7.1.0"
+kotlin = "1.6.21"
+room = "2.4.2"
+
+[libraries]
+appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+coreKtx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
+constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
+lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
+lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "recyclerview" }
+cardview = { module = "androidx.cardview:cardview", version.ref = "cardview" }
+coil = { module = "io.coil-kt:coil", version.ref = "coil" }
+navigation-fragment = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigation" }
+navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation" }
+navigation-testing = { module = "androidx.navigation:navigation-testing", version.ref = "navigation" }
+fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "fragment" }
+fragment-testing = { module = "androidx.fragment:fragment-testing", version.ref = "fragment" }
+material-design = { module = "com.google.android.material:material", version.ref = "material-design" }
+espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso" }
+espresso-contrib = { module = "androidx.test.espresso:espresso-contrib", version.ref = "espresso" }
+espresso-intent = { module = "androidx.test.espresso:espresso-intents", version.ref = "espresso" }
+unit-junit = { module = "junit:junit", version.ref = "junit" }
+android-test = { module = "androidx.test.ext:junit", version.ref = "junit-ext" }
+square-okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
+apollo-graphql = { module = "com.apollographql.apollo3:apollo-runtime", version.ref = "graphql" }
+apollo-graphql-testing = { module = "com.apollographql.apollo3:apollo-testing-support", version.ref = "graphql" }
+unit-mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+instrumented-mockk = { module = "io.mockk:mockk-android", version.ref = "mockk" }
+jake-timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
+lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
+coroutine-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "test-coroutine" }
+androidx-test-runner = { module = "androidx.test:runner", version.ref = "androidx-test" }
+androidx-test-rules = { module = "androidx.test:rules", version.ref = "androidx-test" }
+androidx-core = { module = "androidx.test:core-ktx", version.ref = "androidx-test" }
+autoUI = { module = "androidx.test.uiautomator:uiautomator", version.ref = "automator" }
+android-hilt = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+android-hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
+android-hilt-testing = { module = "com.google.dagger:hilt-android-testing", version.ref = "hilt" }
+android-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+android-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+android-room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+
+[bundles]
+lifecycle = ["lifecycle-runtime", "lifecycle-viewmodel"]
+navigation = ["navigation-fragment", "navigation-ui-ktx", "navigation-testing"]
+fragment = ["fragment-ktx", "fragment-testing"]
+espresso = ["espresso-core", "espresso-contrib", "espresso-intent"]
+mockk = ["unit-mockk", "instrumented-mockk"]
+test = ["androidx-test-runner", "androidx-test-rules"]
+apollo = ["apollo-graphql-testing", "apollo-graphql"]
+room = ["android-room-runtime", "android-room-ktx"]
+
+[plugins]
+application = { id = "com.android.application", version.ref = "app-version" }
+kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+dagger-hilt-plugin = { id = "dagger.hilt.android.plugin", version.ref = "hilt" }
+apollo-graphql-plugin = { id = "com.apollographql.apollo3", version.ref = "graphql" }

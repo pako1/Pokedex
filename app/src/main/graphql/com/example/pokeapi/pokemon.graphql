@@ -1,0 +1,28 @@
+query pokemon($pokemonName : String!){
+    pokemon(name : $pokemonName){
+        game_indices{
+            version{
+                name
+            }
+        },
+        height,
+        moves{
+            move{
+                name
+            },
+        },
+        weight,
+        types{
+            type{
+                name
+            }
+        },
+        id
+        stats{
+            base_stat,
+            stat{
+                name
+            }
+        }
+    }
+}

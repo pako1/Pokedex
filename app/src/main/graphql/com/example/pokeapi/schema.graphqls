@@ -1,0 +1,171 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+}
+
+directive @cacheControl(maxAge: Int, scope: CacheControlScope) on OBJECT | FIELD_DEFINITION | INTERFACE
+
+type Ability {
+    ability: BaseName
+    is_hidden: Boolean
+    slot: Int
+}
+
+type BaseList {
+    count: Int
+    message: String
+    next: String
+    previous: String
+    results: [BaseName]
+    status: Boolean
+}
+
+type BaseName {
+    id: Int
+    name: String
+    url: String
+}
+
+type BaseResponse {
+    message: String
+    params: JSON
+    response: JSON
+    status: Boolean
+}
+
+type GameIndex {
+    game_index: Int
+    version: BaseName
+}
+
+type HeldItem {
+    item: BaseName
+    version_details: [VersionDetail]
+}
+
+type Move {
+    move: BaseName
+    version_group_details: [VersionGroupDetail]
+}
+
+type Pokemon {
+    abilities: [Ability]
+    base_experience: Int
+    forms: [BaseName]
+    game_indices: [GameIndex]
+    height: Int
+    held_items: [HeldItem]
+    id: Int
+    is_default: Boolean
+    location_area_encounters: String
+    message: String
+    moves: [Move]
+    name: String
+    order: Int
+    species: BaseName
+    sprites: Sprite
+    stats: [Stat]
+    status: Boolean
+    types: [Type]
+    weight: Int
+}
+
+type PokemonItem {
+    artwork: String
+    dreamworld: String
+    id: Int
+    image: String
+    name: String
+    url: String
+}
+
+type PokemonList {
+    count: Int
+    message: String
+    next: String
+    nextOffset: Int
+    params: JSON
+    prevOffset: Int
+    previous: String
+    results: [PokemonItem]
+    status: Boolean
+}
+
+type Query {
+    abilities: BaseList
+    ability(ability: String!): BaseResponse
+    berries: BaseList
+    berry(berry: String!): BaseResponse
+    eggGroup(eggGroup: String!): BaseResponse
+    eggGroups: BaseList
+    encounterMethod(encounterMethod: String!): BaseResponse
+    encounterMethods: BaseList
+    evolutionChain(id: String!): BaseResponse
+    evolutionChains: BaseList
+    evolutionTrigger(name: String!): BaseResponse
+    evolutionTriggers: BaseList
+    gender(gender: String!): BaseResponse
+    genders: BaseList
+    growthRate(growthRate: String!): BaseResponse
+    growthRates: BaseList
+    location(location: String!): BaseResponse
+    locations: BaseList
+    move(move: String!): BaseResponse
+    moves: BaseList
+    nature(nature: String!): BaseResponse
+    natures: BaseList
+    pokemon(name: String!): Pokemon
+    pokemons(limit: Int, offset: Int): PokemonList
+    region(region: String!): BaseResponse
+    regions: BaseList
+    species: BaseList
+    types: BaseList
+}
+
+type Sprite {
+    back_default: String
+    back_female: String
+    back_shiny: String
+    back_shiny_female: String
+    front_default: String
+    front_female: String
+    front_shiny: String
+    front_shiny_female: String
+}
+
+type Stat {
+    base_stat: Int
+    effort: Int
+    stat: BaseName
+}
+
+type Type {
+    slot: Int
+    type: BaseName
+}
+
+type VersionDetail {
+    rarity: Int
+    version: BaseName
+}
+
+type VersionGroupDetail {
+    level_learned_at: Int
+    move_learn_method: BaseName
+    version_group: BaseName
+}
+
+enum CacheControlScope {
+    PRIVATE
+    PUBLIC
+}
+
+"The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)."
+scalar JSON
+
+"The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)."
+scalar JSONObject
+
+"The `Upload` scalar type represents a file upload."
+scalar Upload

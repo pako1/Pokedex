@@ -1,0 +1,55 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowContentTransitions">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorOnPrimary">@color/primaryTextColor</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/primaryDarkColor</item>
+        <item name="colorSecondary">@color/colorSecondaryDay</item>
+    </style>
+
+    <style name="BottomCutCardView" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MaterialCardView.Cut
+        </item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MaterialCardView.Cut" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">8dp</item>
+        <item name="cornerSizeTopLeft">8dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+
+    <style name="progressStyleText" parent="">
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:textColor">@color/washedOutColor</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>
+
+
+    <!--is used for toolbar-->
+    <!--<item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorOnPrimary">@color/primaryTextColor</item>
+    &lt;!&ndash;is used for status bar&ndash;&gt;
+    <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+    <item name="colorAccent">@color/colorAccent</item>-->
+    <!--
+    <item name="colorSecondary"></item>
+      Floating action buttons
+      Selection controls, like sliders and switches
+      Highlighting selected text
+      Progress bars
+      Links and headlines
+     -->
+    <!--Surface colors affect surfaces of components, such as cards, sheets, and menus.-->
+    <!--The background color appears behind scrollable content. The baseline background and surface color is #FFFFFF.
+Error color indicates errors in components, such as invalid text in a text field. The baseline error color is #B00020.-->
