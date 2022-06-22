@@ -37,7 +37,7 @@
 
 #### Tools
 
-- Android Studio (Chipmunk)
+- Android Studio (Chipmunk) 🐿️
 
 #### Android
 
