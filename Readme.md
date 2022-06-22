@@ -1,15 +1,23 @@
-# Pokedex - Android App &ensp; [![GitHub followers](https://img.shields.io/github/followers/pako1.svg?style=social&label=Follow&maxAge=2592000)](https://github.com/pako1?tab=followers)
+# Pokedex - Android App 
 
-<img src="/images/pokeball.gif" align="left" width="200" hspace="10">
+
+<img src="/images/bokeball.gif" align="left" width="200" hspace="10">
 
 ## About
 
-Pokedex is an Pokémon Database app for Android. It is based on PokéAPI and powered by Kotlin. The app uses apollo graphql to fetch data and allows users to view Pokémons and add them to their favorites created with modern Android development tools and libraries.
+<div style="text-align: right"> Pokedex is an Pokémon Database app for Android. It is based on PokéAPI and powered by Kotlin. The app uses apollo graphql to fetch data and allows users to view Pokémons and add them to their favorites created with modern Android development tools and libraries. </div>
+
+\
+&nbsp;
 
 ## Screenshots
-<img src="images/splash.png" width="250" alt="Home">
-<img src="images/start_screen.png" width="250" alt="Home">
-<img src="images/details.png" width="250" alt="Home">
+<p float="left">
+<img src="images/splash.png" width="200">
+  &nbsp; &nbsp; &nbsp;
+<img src="images/start_screen.png" width="200">
+   &nbsp; &nbsp; &nbsp;
+<img src="images/details.png" width="200">
+</p>
 
 ## ✨ Features ✨
 - Splash screen
@@ -64,9 +72,7 @@ Clone this repository and import into Android Studio
 
 ## Maintainers
 
-This project is mantained by:
-
-[pako1](https://github.com/pako1)
+This project is mantained by: [pako1](https://github.com/pako1) 
 
 ## License
 
